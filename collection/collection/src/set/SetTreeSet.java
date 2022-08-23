@@ -3,6 +3,9 @@ package set;
 import java.util.TreeSet;
 
 public class SetTreeSet {
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		TreeSet<Integer> ts = new TreeSet<>();
 		ts.add(48);
@@ -18,7 +21,7 @@ public class SetTreeSet {
 		System.out.println(ts.ceiling(11));
 		System.out.println(ts.first());
 		System.out.println(ts.floor(15));
-		System.out.println(ts.lower(48));
+		System.out.println(ts.lower(6));
 		System.out.println(ts.toString());
 		System.out.println(ts);
 	}
