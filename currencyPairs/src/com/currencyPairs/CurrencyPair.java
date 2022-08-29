@@ -2,8 +2,8 @@ package com.currencyPairs;
 
 public class CurrencyPair implements Comparable<CurrencyPair> {
 	
-	private String Ccy1;
-	private String Ccy2;
+	private String currency1;
+	private String currency2;
 	private String Spotdays;
 	private String WeekendDays;
 	private String Precision;
@@ -19,12 +19,12 @@ public class CurrencyPair implements Comparable<CurrencyPair> {
 		this.curencyPair = curencyPair;
 	}
 
-	public String getCcy1() {
-		return Ccy1;
+	public String getcurrency1() {
+		return currency1;
 	}
 
-	public String getCcy2() {
-		return Ccy2;
+	public String getcurrency2() {
+		return currency2;
 	}
 
 	public String getSpotdays() {
@@ -43,11 +43,11 @@ public class CurrencyPair implements Comparable<CurrencyPair> {
 		return LastUpdatedTime;
 	}
 
-	public CurrencyPair(String ccy1, String ccy2, String spotdays, String weekendDays, String precision,
+	public CurrencyPair(String currency1, String currency2, String spotdays, String weekendDays, String precision,
 			String lastUpdatedTime) {
 		super();
-		Ccy1 = ccy1;
-		Ccy2 = ccy2;
+		this.currency1 = currency1;
+		this.currency2 = currency2;
 		Spotdays = spotdays;
 		WeekendDays = weekendDays;
 		Precision = precision;
@@ -56,14 +56,14 @@ public class CurrencyPair implements Comparable<CurrencyPair> {
 
 	@Override
 	public String toString() {
-		return "CurrencyPair [Ccy1=" + Ccy1 + ", Ccy2=" + Ccy2 + ", Spotdays=" + Spotdays + ", WeekendDays="
+		return "CurrencyPair [currency1=" + currency1 + ", currency2=" + currency2 + ", Spotdays=" + Spotdays + ", WeekendDays="
 				+ WeekendDays + ", Precision=" + Precision + ", LastUpdatedTime=" + LastUpdatedTime + "]";
 	}
 
 	@Override
 	public int compareTo(CurrencyPair o) {
 		
-		return (Ccy1+Ccy2).compareTo(o.Ccy1+o.Ccy2);
+		return (currency1+currency2).compareTo(o.currency1+o.currency2);
 	}
 	
 

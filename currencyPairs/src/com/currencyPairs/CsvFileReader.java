@@ -12,19 +12,19 @@ public class CsvFileReader {
 		String line="";
 		String[] values = null;
 			ArrayList<CurrencyPair> al= new ArrayList<CurrencyPair>();
-			BufferedReader br= new BufferedReader(new FileReader(path));
-				while((line = br.readLine())!=null) {
+			BufferedReader buffererReader= new BufferedReader(new FileReader(path));
+				while((line = buffererReader.readLine())!=null) {
 					values = line.split(",");
-					CurrencyPair c = new  CurrencyPair(values[0],values[1],values[2],values[3],values[4],values[5]);
-					al.add(c);
+					CurrencyPair currencyPair = new  CurrencyPair(values[0],values[1],values[2],values[3],values[4],values[5]);
+					al.add(currencyPair);
 				}
 				
 				
 				//helps us to retrieve data by searching values of Currency1+currency2
-				//searching(al); 
+				searching(al); 
 				
 				//helps us to sort the by currency1+currency2
-				sortion(al);
+				//sortion(al);
 				//helps us to sort the last updated time
 				/*sortDate(al);
 				for(CurrencyPair cp :al) {
@@ -39,10 +39,10 @@ public class CsvFileReader {
 	static CurrencyPair searching(ArrayList<CurrencyPair> al) {
 		   Scanner sc = new Scanner(System.in);
 		   System.out.println("Enter the  ccy pairs :");
-		   String ccyPairs = sc.next();
+		   String currencyPairs = sc.next();
 		  
 			for(CurrencyPair cp : al) {
-				if(ccyPairs.equalsIgnoreCase(cp.getCcy1()+cp.getCcy2())) {
+				if(currencyPairs.equalsIgnoreCase(cp.getcurrency1()+cp.getcurrency2())) {
 					System.out.println(cp);
 				}
 			}
