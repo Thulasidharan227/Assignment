@@ -18,15 +18,19 @@ public class CsvFileReader {
 					CurrencyPair c = new  CurrencyPair(values[0],values[1],values[2],values[3],values[4],values[5]);
 					al.add(c);
 				}
+				
+				
+				//helps us to retrieve data by searching values of Currency1+currency2
+				//searching(al); 
+				
+				//helps us to sort the by currency1+currency2
+				sortion(al);
+				//helps us to sort the last updated time
 				/*sortDate(al);
 				for(CurrencyPair cp :al) {
 					System.out.println(cp);
 				}*/
-				searching(al); 
 				
-				//sortion(al);
-				
-				//dateSortion(al);
 				}
 	   private static void sortDate(ArrayList<CurrencyPair> al) {
 		   Collections.sort(al, new DateSortion());
