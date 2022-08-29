@@ -57,15 +57,7 @@ public class CsvFileReader {
 		   
 	   }
 			
-	   }
-	   static void dateSortion(ArrayList<CurrencyPair> al) {
-		   
-		   Collections.sort(al);
-		   for(CurrencyPair v : al) {
-			   System.out.println(v);
-		   }
-		   
-		  }
+	   	  }
 }
 	   
 
